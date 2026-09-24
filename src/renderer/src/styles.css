@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; margin: 0; }
+body { font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; }
+
+@layer components {
+  .btn-primary { @apply rounded-lg bg-stone-900 text-white px-3 py-1.5 text-sm hover:bg-amber-700 disabled:opacity-50 transition; }
+  .btn-ghost { @apply rounded-md px-2 py-1 text-stone-600 hover:bg-stone-200/70 transition; }
+  .chip { @apply rounded-full bg-stone-100 text-stone-700 px-3 py-1 text-xs hover:bg-amber-100 transition; }
+  .input { @apply w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400; }
+  .card { @apply rounded-lg bg-white border border-stone-200 p-3 hover:border-amber-300 hover:shadow-sm transition; }
+  .section-title { @apply text-[11px] uppercase tracking-wider text-stone-500 mb-2 block; }
+  .kbd { @apply rounded border border-stone-300 bg-white px-1 text-[10px] text-stone-500; }
+}
+
+/* pdf.js text layer: keep selection visible over the canvas */
+.textLayer ::selection { background: rgba(56, 189, 248, 0.35); }
