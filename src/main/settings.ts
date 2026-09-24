@@ -3,7 +3,8 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
 import type { LlmSettings } from '@shared/types'
 
-export const DEFAULTS = { baseURL: 'https://www.sleepyai.org/api/v1', model: 'deepseek-v4' }
+// SleepyAI's model list has no plain "deepseek-v4" — "-pro" is the flagship tier (vs "-flash").
+export const DEFAULTS = { baseURL: 'https://www.sleepyai.org/api/v1', model: 'deepseek-v4-pro' }
 
 interface Stored { baseURL: string; model: string; encKey?: string }
 
